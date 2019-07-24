@@ -10,6 +10,6 @@
     appId: process.env.REACT_APP_ID 
   };
   // Initialize Firebase
-  const fire = firebase.initializeApp(firebaseConfig);
-  export default fire;
+  const Firebase = firebase.initializeApp(firebaseConfig);
+  export default Firebase;
   
