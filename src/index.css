@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     padding: 0px;
+    font-family: 'Source Code Pro', monospace;
 }
 
 #root{
@@ -17,17 +18,13 @@ ul{
     margin: 0px;
 }
 
-li{
-    
-}
-
 a{
     position: relative;
     display: inline-block;
     color: #fff;
     text-decoration: none;
     /**height: 100%;**/
-    padding: 22.3px 30px;
+    padding: 23.3px 30px;
     box-sizing: border-box; 
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
@@ -36,4 +33,71 @@ a{
 
 a:hover{
     background-color: #0061c9;
+}
+
+form input[type=text]{
+    width: 100%;
+    font-weight: 550;
+    border: none;
+    background-color: #9AAFBC;
+    padding: 20px 5px;
+    margin: 10px 0px;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    box-sizing: border-box;
+}
+::placeholder{
+    color: white;
+}
+
+button{
+    width: 180px;
+    padding: 18px 5px;
+    color: white;
+    border: none;
+    background: #0061c9;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table, th, td {
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+thead {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td, th {
+    padding: 15px 10px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    padding: 15px 5px;
+    border-radius: 2px;
 }
