@@ -2,6 +2,7 @@
   import firebase from 'firebase/app';
   import 'firebase/firestore';
   import 'firebase/auth';
+  
 
   var firebaseConfig = {
     /*apiKey: process.env.REACT_APP_API_KEY,
@@ -19,8 +20,16 @@
     messagingSenderId: "404766685794",
     appId: "1:404766685794:web:fb305f685c14a64a"
   };
+
+  const rrfConfig = {
+      userProfile: 'users',
+      useFirestoreForProfile: 'true'
+  }
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.firestore();
+  
   export default firebase;
+  export { rrfConfig  }
   

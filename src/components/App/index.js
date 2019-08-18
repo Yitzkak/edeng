@@ -9,6 +9,7 @@ import Shops from '../Shops'
 import Logout from '../Logout'
 
 const App = () => (
+    
     <Router>
         <Navigation />
 

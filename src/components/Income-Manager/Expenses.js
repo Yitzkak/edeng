@@ -2,6 +2,7 @@ import React from 'react'
 import { TableContainer } from '../elements'
 
 function Expenses({expenses}) {
+    console.log(expenses);
     return (
         <TableContainer>
             <table>
@@ -21,7 +22,7 @@ function Expenses({expenses}) {
                                     <td>{expense.amount}</td>
                                     <td>{expense.description}</td>
                                     <td>{expense.date}</td>
-                                 </tr>
+                                </tr>
                             )
                         })                        
                     }

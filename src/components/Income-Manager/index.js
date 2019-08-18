@@ -3,7 +3,8 @@ import { Container, Sidebar, MainArea, MainAreaOne, MainAreaTwo, SectionTitle } 
 import { connect } from 'react-redux';
 import Expenses from './Expenses';
 import { addExpense }  from '../../store/actions/expensesActions';
-import { firestoreConnect } from 'react-redux-firebase';
+//import { firestoreConnect } from 'react-redux-firebase';
+import firestoreConnect from 'react-redux-firebase/lib/firestoreConnect';
 import { compose } from 'redux';
 
 
@@ -47,9 +48,8 @@ class IncomeManager extends Component{
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
-        //expenses: state.firestore.ordered.expenses
+        expenses: state.firestore.ordered.expenses
     }
 } 
 const mapDispatchToProps = (dispatch) => {
@@ -61,8 +61,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default compose(
-    connect(mapStateToProps, mapDispatchToProps),
     firestoreConnect([{
         collection: 'expenses'
-    }])
+    }]),
+    connect(mapStateToProps, mapDispatchToProps)
 )(IncomeManager);
+
+/*export default compose(
+    firestoreConnect(() => ['todos']), // or { collection: 'todos' }
+    connect((state, props) => ({
+      todos: state.firestore.ordered.todos
+    }))*/
